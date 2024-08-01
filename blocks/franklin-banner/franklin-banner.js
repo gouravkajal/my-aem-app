@@ -2,5 +2,5 @@ import { fetchPlaceholders } from '/scripts/aem.js';
 
 export default async function decorate(block) {
     const placeholders = await fetchPlaceholders('');
-    console.log("🚀 ~ decorate ~ placeholders:", placeholders)
+    block.querySelector('a').innerText = placeholders?.clickHereForMore;
 }
